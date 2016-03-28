@@ -11,10 +11,11 @@ namespace Ejercicio11
         {
             Console.Title = "Ejercicio 11";
 
-            int max=0, min=0;
+            int max = 0, min = 0, acum = 0;
             int flag = 0;
+            double prom = 0;
 
-            for(int i=0; i<4; i++)
+            for(int i=0; i<10; i++)
             {
                 Console.Write("Ingrese numero: ");
                 int numero = int.Parse(Console.ReadLine());
@@ -37,8 +38,15 @@ namespace Ejercicio11
                         min = numero;
                     }
                 }
+
+                acum = acum + numero;
+                prom = (double)acum / 10;
             }
 
+            Console.Write("El maximo es: " + max);
+            Console.Write("\nEl minimo es: " + min);
+            Console.Write("\nEl promedio es: {0:f2}", prom); 
+            
             Console.ReadKey();
         }
     }
