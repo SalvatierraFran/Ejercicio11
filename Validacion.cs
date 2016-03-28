@@ -9,13 +9,13 @@ namespace Ejercicio11
     {
         public static bool Validar(int num, int num2, int num3)
         {
-            if (num < num2 && num > num3)
+            if (num > num2 && num < num3)
             {
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
     }
